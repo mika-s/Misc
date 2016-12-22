@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet"> 
+    <CodeSnippet Format="1.0.0"> 
+        <Header> 
+            <Title>INotifyPropertyChanged implementation</Title> 
+            <Shortcut>npc</Shortcut> 
+            <Description>Code snippet to implement INotifyPropertyChanged and to create NotifyPropertyChanged().</Description> 
+            <Author>MikaS</Author> 
+        </Header> 
+        <Snippet> 
+            <Code Language="csharp"><![CDATA[public event PropertyChangedEventHandler PropertyChanged;
+            
+        protected void NotifyPropertyChanged([CallerMemberName]string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+        }]]></Code> 
+        </Snippet> 
+    </CodeSnippet> 
+</CodeSnippets> 

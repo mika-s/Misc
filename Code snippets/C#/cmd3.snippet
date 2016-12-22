@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet"> 
+    <CodeSnippet Format="1.0.0"> 
+        <Header> 
+            <Title>DelegateCommand execute</Title> 
+            <Shortcut>cmd3</Shortcut> 
+            <Description>Adds method part of DelegateCommand.</Description> 
+            <Author>MikaS</Author> 
+            <SnippetTypes> 
+                <SnippetType>Expansion</SnippetType> 
+            </SnippetTypes> 
+        </Header> 
+        <Snippet> 
+            <Declarations> 
+                <Literal> 
+                    <ID>type</ID> 
+                    <ToolTip>Command type</ToolTip> 
+                    <Default>string</Default> 
+                </Literal> 
+                <Literal> 
+                    <ID>name</ID> 
+                    <ToolTip>Command name</ToolTip> 
+                    <Default>Do</Default> 
+                </Literal> 
+            </Declarations> 
+            <Code Language="csharp"><![CDATA[private void $name$Execute($type$ parameter)
+        {
+        
+        }]]></Code> 
+        </Snippet> 
+    </CodeSnippet> 
+</CodeSnippets> 
