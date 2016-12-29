@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:CSharp"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <local:EnumToStringConverter x:Key="EnumToStringConverter" />
+    </Window.Resources>
     <Grid>
-        
+        <Image Source="{Binding TestEnumToImage, Converter={StaticResource EnumToStringConverter}}" />
     </Grid>
 </Window>
