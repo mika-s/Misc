@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaffoldBasicApplication", "ScaffoldBasicApplication\ScaffoldBasicApplication.csproj", "{FF59044B-3A6B-4BEB-A15A-0EEFEBB03273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timers", "Timers\Timers.csproj", "{1D8FE4ED-03CA-4A9E-9DDF-1F1D0A0DC9DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FF59044B-3A6B-4BEB-A15A-0EEFEBB03273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF59044B-3A6B-4BEB-A15A-0EEFEBB03273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF59044B-3A6B-4BEB-A15A-0EEFEBB03273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8FE4ED-03CA-4A9E-9DDF-1F1D0A0DC9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8FE4ED-03CA-4A9E-9DDF-1F1D0A0DC9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8FE4ED-03CA-4A9E-9DDF-1F1D0A0DC9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8FE4ED-03CA-4A9E-9DDF-1F1D0A0DC9DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
