@@ -12,7 +12,7 @@
             
         protected void NotifyPropertyChanged([CallerMemberName]string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }]]></Code> 
         </Snippet> 
     </CodeSnippet> 

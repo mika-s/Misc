@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BoolToImageConverter.cs" />
     <Compile Include="DelegateCommand.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ViewModel.cs" />
@@ -100,7 +101,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\FalseImage.png" />
+    <Resource Include="Images\TrueImage.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\test1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -11,8 +11,19 @@
     </Window.DataContext>
     <Window.Resources>
         <local:EnumToStringConverter x:Key="EnumToStringConverter" />
+        <local:BoolToImageConverter x:Key="BoolToImageConverter" />
     </Window.Resources>
     <Grid>
-        <Image Source="{Binding TestEnumToImage, Converter={StaticResource EnumToStringConverter}}" />
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" 
+               Source="{Binding TestEnumToImage, Converter={StaticResource EnumToStringConverter}}" />
+        <Image Grid.Row="1" 
+               Source="{Binding BoolToImageTrue, Converter={StaticResource BoolToImageConverter}}" />
+        <Image Grid.Row="2" 
+               Source="{Binding BoolToImageFalse, Converter={StaticResource BoolToImageConverter}}" />
     </Grid>
 </Window>
