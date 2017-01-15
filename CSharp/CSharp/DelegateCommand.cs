@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace ScaffoldBasicApplication
+namespace CSharp
 {
     /// <summary>
     /// Class for easily creating commands.

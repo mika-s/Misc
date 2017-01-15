@@ -56,9 +56,38 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BoolToImageConverter.cs" />
+    <Compile Include="DataGrids.cs" />
+    <Compile Include="DataGridWithButtons.xaml.cs">
+      <DependentUpon>DataGridWithButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridWithChosenColumns.xaml.cs">
+      <DependentUpon>DataGridWithChosenColumns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridWithSingleClickCheckBox.xaml.cs">
+      <DependentUpon>DataGridWithSingleClickCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridWithTransparentSelectedItem.xaml.cs">
+      <DependentUpon>DataGridWithTransparentSelectedItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DelegateCommand.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ViewModel.cs" />
+    <Page Include="DataGridWithButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataGridWithChosenColumns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataGridWithSingleClickCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataGridWithTransparentSelectedItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

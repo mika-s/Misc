@@ -7,7 +7,7 @@ namespace Timers
 {
     /// <summary>
     /// A timer based on System.Threading.Timer.
-    /// Calls the TiemrFired method every 10 seconds. Waits 0 seconds before it starts.
+    /// Calls the TimerFired method every 10 seconds. Waits 0 seconds before it starts.
     /// </summary>
     public sealed class SystemThreadingTimer : INotifyPropertyChanged
     {
