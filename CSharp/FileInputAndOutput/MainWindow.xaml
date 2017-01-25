@@ -1,0 +1,69 @@
+﻿<Window x:Class="FileInputAndOutput.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileInputAndOutput"
+        mc:Ignorable="d"
+        Title="File IO" Height="700" Width="525">
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition />
+            <RowDefinition Height="25" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Buttons for reading/writing to files:"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" >
+            <Button Content="Read ordinary file with FileStream"
+                    Command="{Binding ReadOrdinaryFileWithFileStreamCommand}"
+                    Height="25" Width="210" Margin="10" />
+
+            <Button Content="Read ordinary file with StreamReader"
+                    Command="{Binding ReadOrdinaryFileWithStreamReaderCommand}"
+                    Height="25" Width="210" Margin="10" />
+
+            <Button Content="Read XML file" Command="{Binding ReadXmlFileCommand}"
+                    Height="25" Width="100" Margin="10" />
+
+            <Grid>
+                <TextBox Text="{Binding CsvColumnToRead, Mode=TwoWay}" HorizontalAlignment="Left"
+                         Height="25" Width="100" Margin="10" />
+
+                <Button Content="Read CSV file" HorizontalAlignment="Right"
+                        Command="{Binding ReadCsvFileCommand}"
+                        Height="25" Width="100" Margin="10" />
+            </Grid>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Read from text file:"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding FileContent}"
+                 IsReadOnly="True"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Read XML file content:"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding XmlContentList}" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Write to text file:"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox Grid.Row="3" Grid.Column="0" Text="{Binding ContentToWrite}" />
+    </Grid>
+</Window>

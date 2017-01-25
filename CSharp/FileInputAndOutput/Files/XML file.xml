@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RootElement>
+  <ChildElements>
+    <ChildElement>
+      <ChildValue Name="ChildValue1" Value="123" />
+      <ChildValue Name="ChildValue2" Value="Test" />
+      <ChildValue Name="ChildValue3" Value="EnumValue1" />
+    </ChildElement>
+    <ChildElement>
+      <ChildValue Name="ChildValue1" Value="321" />
+      <ChildValue Name="ChildValue2" Value="Tset" />
+      <ChildValue Name="ChildValue3" Value="EnumValue2" />
+    </ChildElement>
+  </ChildElements>
+</RootElement>

@@ -1,22 +1,29 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Threading;
+using System.Timers;
 
 namespace Timers
 {
     /// <summary>
-    /// A timer based on System.Threading.Timer.
-    /// Calls the TimerFired method every 10 seconds. Waits 0 seconds before it starts.
+    /// A timer based on System.Timers.Timer.
+    /// Calls the TimerFired method every 10 seconds. Starts immidiatly.
     /// </summary>
-    public sealed class SystemThreadingTimer : INotifyPropertyChanged
+    public sealed class SystemTimersTimer : INotifyPropertyChanged
     {
         private Timer timer;
         private string timerData;
 
-        public SystemThreadingTimer()
+        public SystemTimersTimer()
         {
-            Timer = new Timer(TimerFired, null, 0, 10000);
+            Timer = new Timer();
+            Timer.Elapsed += TimerFired;
+            Timer.Enabled = true;
+            Timer.Interval = 10000;
+            Timer.Start();
+
+            // This timer does not fire immidiatly, but it can be done by calling the event handler manually.
+            TimerFired(this, null);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -54,11 +61,11 @@ namespace Timers
         }
 
         /// <summary>
-        /// This callback does not occur on the UI thread. This is run on a thread-pool thread.
+        /// This method is not run on the UI thread, but is run on a thread-pool thread.
         /// </summary>
-        private void TimerFired(object state)
+        private void TimerFired(object sender, ElapsedEventArgs e)
         {
-            TimerData = $"The threading timer fired at {DateTime.Now}.";
+            TimerData = $"The timers timer fired at {DateTime.Now}.";
         }
 
         private void NotifyPropertyChanged([CallerMemberName]string propertyName = null)

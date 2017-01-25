@@ -1,0 +1,6 @@
+This is an ordinary text file.
+
+
+This is another line.
+
+This is the last line. Special characters: æøå.

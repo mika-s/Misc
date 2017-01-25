@@ -7,11 +7,11 @@ namespace Timers
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(SystemThreadingTimer timerDependency)
+        public MainWindow(SystemThreadingTimer timerDependency, SystemTimersTimer systemTimersTimerDependency)
         {
             InitializeComponent();
-            MainViewModel mainViewModel = new MainViewModel(timerDependency);
-            this.DataContext = mainViewModel;
+            MainViewModel mainViewModel = new MainViewModel(timerDependency, systemTimersTimerDependency);
+            DataContext = mainViewModel;
         }
     }
 }

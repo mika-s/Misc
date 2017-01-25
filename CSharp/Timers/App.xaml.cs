@@ -9,8 +9,9 @@ namespace Timers
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            SystemThreadingTimer timerDependency = new SystemThreadingTimer();
-            MainWindow window = new MainWindow(timerDependency);
+            SystemThreadingTimer systemThreadingTimerDependency = new SystemThreadingTimer();
+            SystemTimersTimer systemTimersTimerDependency = new SystemTimersTimer();
+            MainWindow window = new MainWindow(systemThreadingTimerDependency, systemTimersTimerDependency);
             window.Show();
         }
     }

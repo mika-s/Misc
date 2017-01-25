@@ -2,24 +2,42 @@
 {
     public sealed class MainViewModel : ViewModel
     {
-        private SystemThreadingTimer timer;
+        private SystemThreadingTimer systemThreadingTimer;
+        private SystemTimersTimer systemTimersTimer;
 
-        public MainViewModel(SystemThreadingTimer timerDependency)
+        public MainViewModel(SystemThreadingTimer systemThreadingtimerDependency, SystemTimersTimer systemTimersTimerDependency)
         {
-            timer = timerDependency;
+            SystemThreadingTimer = systemThreadingtimerDependency;
+            SystemTimersTimer = systemTimersTimerDependency;
         }
 
-        public SystemThreadingTimer Timer
+        public SystemThreadingTimer SystemThreadingTimer
         {
             get
             {
-                return timer;
+                return systemThreadingTimer;
             }
             set
             {
-                if (timer != value)
+                if (systemThreadingTimer != value)
                 {
-                    timer = value;
+                    systemThreadingTimer = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        
+        public SystemTimersTimer SystemTimersTimer
+        {
+            get
+            {
+                return systemTimersTimer;
+            }
+            set
+            {
+                if (systemTimersTimer != value)
+                {
+                    systemTimersTimer = value;
                     NotifyPropertyChanged();
                 }
             }

@@ -13,7 +13,10 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Height="25" Width="250"
-                   Text="{Binding Timer.TimerData}" />
+        <TextBlock Grid.Row="0" Height="25" Width="300"
+                   Text="{Binding SystemThreadingTimer.TimerData}" />
+
+        <TextBlock Grid.Row="1" Height="25" Width="300"
+                   Text="{Binding SystemTimersTimer.TimerData}" />
     </Grid>
 </Window>
