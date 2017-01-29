@@ -4,11 +4,14 @@
     {
         private SystemThreadingTimer systemThreadingTimer;
         private SystemTimersTimer systemTimersTimer;
+        private SystemWindowsFormsTimer systemWindowsFormsTimer;
 
-        public MainViewModel(SystemThreadingTimer systemThreadingtimerDependency, SystemTimersTimer systemTimersTimerDependency)
+        public MainViewModel(SystemThreadingTimer systemThreadingtimerDependency, SystemTimersTimer systemTimersTimerDependency, 
+            SystemWindowsFormsTimer systemWindowsFormsTimerDependency)
         {
             SystemThreadingTimer = systemThreadingtimerDependency;
             SystemTimersTimer = systemTimersTimerDependency;
+            SystemWindowsFormsTimer = systemWindowsFormsTimerDependency;
         }
 
         public SystemThreadingTimer SystemThreadingTimer
@@ -38,6 +41,22 @@
                 if (systemTimersTimer != value)
                 {
                     systemTimersTimer = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public SystemWindowsFormsTimer SystemWindowsFormsTimer
+        {
+            get
+            {
+                return systemWindowsFormsTimer;
+            }
+            set
+            {
+                if (systemWindowsFormsTimer != value)
+                {
+                    systemWindowsFormsTimer = value;
                     NotifyPropertyChanged();
                 }
             }

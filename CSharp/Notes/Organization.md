@@ -21,7 +21,7 @@
 * protected
 * private
 
-# Also remmeber:
+# Also remember:
 
 * Const fields before other fields
 * static before instance

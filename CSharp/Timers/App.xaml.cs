@@ -11,7 +11,8 @@ namespace Timers
         {
             SystemThreadingTimer systemThreadingTimerDependency = new SystemThreadingTimer();
             SystemTimersTimer systemTimersTimerDependency = new SystemTimersTimer();
-            MainWindow window = new MainWindow(systemThreadingTimerDependency, systemTimersTimerDependency);
+            SystemWindowsFormsTimer systemWindowsFormsTimerDependency = new SystemWindowsFormsTimer();
+            MainWindow window = new MainWindow(systemThreadingTimerDependency, systemTimersTimerDependency, systemWindowsFormsTimerDependency);
             window.Show();
         }
     }

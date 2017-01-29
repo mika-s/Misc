@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timers", "Timers\Timers.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileInputAndOutput", "FileInputAndOutput\FileInputAndOutput.csproj", "{296D3DD3-1048-4182-BAE7-8A2EEA09BE45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{561FC11C-BF8B-471A-929A-AE2E2366FA79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{296D3DD3-1048-4182-BAE7-8A2EEA09BE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{296D3DD3-1048-4182-BAE7-8A2EEA09BE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{296D3DD3-1048-4182-BAE7-8A2EEA09BE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
