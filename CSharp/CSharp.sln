@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileInputAndOutput", "FileI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{561FC11C-BF8B-471A-929A-AE2E2366FA79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingAndDebugging", "LoggingAndDebugging\LoggingAndDebugging.csproj", "{79B05617-E485-4A34-91FE-3655C1B3D811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{561FC11C-BF8B-471A-929A-AE2E2366FA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B05617-E485-4A34-91FE-3655C1B3D811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B05617-E485-4A34-91FE-3655C1B3D811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B05617-E485-4A34-91FE-3655C1B3D811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B05617-E485-4A34-91FE-3655C1B3D811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
