@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="CSharp.EnumBoundToComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:CSharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="EnumForComboBoxValues" 
+                            MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:EnumForComboBox"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Enum bound to ComboBox:"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        
+        <ComboBox Grid.Row="1" Width="100" Height="25" VerticalAlignment="Top"
+                  ItemsSource="{Binding Source={StaticResource EnumForComboBoxValues}}"
+                  SelectedItem="{Binding SelectedEnumValue}" />
+    </Grid>
+</UserControl>

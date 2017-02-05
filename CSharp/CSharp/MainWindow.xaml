@@ -24,6 +24,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
         <!-- Converters for images. -->
@@ -39,5 +40,8 @@
         <local:DataGridWithButtons Grid.Row="1" Grid.Column="1" />
         <local:DataGridWithTransparentSelectedItem Grid.Row="2" Grid.Column="1" />
         <local:DataGridWithSingleClickCheckBox Grid.Row="3" Grid.Column="1" />
+        
+        <!--Various examples-->
+        <local:EnumBoundToComboBox Grid.Row="0" Grid.Column="2" />
     </Grid>
 </Window>

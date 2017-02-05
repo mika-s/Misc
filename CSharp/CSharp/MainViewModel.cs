@@ -4,6 +4,8 @@ using System.Windows;
 
 namespace CSharp
 {
+    public enum EnumForComboBox { Value1, Value2, Value3 };
+
     public sealed class MainViewModel : ViewModel
     {
         private MyEnum testEnumToImage;
@@ -12,6 +14,7 @@ namespace CSharp
         private List<SimpleDataGridExample> simpleDataGridList;
         private List<ClassWithFuncExample> classWithFuncList;
         private ClassWithFuncExample selectedClassWithFunc;
+        private EnumForComboBox selectedEnumValue;
 
         public MainViewModel()
         {
@@ -132,6 +135,22 @@ namespace CSharp
                 if (selectedClassWithFunc != value)
                 {
                     selectedClassWithFunc = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public EnumForComboBox SelectedEnumValue
+        {
+            get
+            {
+                return selectedEnumValue;
+            }
+            set
+            {
+                if (selectedEnumValue != value)
+                {
+                    selectedEnumValue = value;
                     NotifyPropertyChanged();
                 }
             }

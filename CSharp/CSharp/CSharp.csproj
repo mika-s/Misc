@@ -70,6 +70,9 @@
       <DependentUpon>DataGridWithTransparentSelectedItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="DelegateCommand.cs" />
+    <Compile Include="EnumBoundToComboBox.xaml.cs">
+      <DependentUpon>EnumBoundToComboBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="DataGridWithButtons.xaml">
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DataGridWithTransparentSelectedItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnumBoundToComboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
