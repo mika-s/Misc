@@ -34,8 +34,11 @@
                     Command="{Binding ReadOrdinaryFileWithStreamReaderCommand}"
                     Height="25" Width="210" Margin="10" />
 
-            <Button Content="Read XML file" Command="{Binding ReadXmlFileCommand}"
-                    Height="25" Width="100" Margin="10" />
+            <Button Content="Read XML file with XmlDocument" Command="{Binding ReadXmlFileWithXmlDocumentCommand}"
+                    Height="25" Width="200" Margin="10" />
+
+            <Button Content="Read XML file with LINQ" Command="{Binding ReadXmlFileWithLinqCommand}"
+                    Height="25" Width="200" Margin="10" />
 
             <Grid>
                 <TextBox Text="{Binding CsvColumnToRead, Mode=TwoWay}" HorizontalAlignment="Left"
