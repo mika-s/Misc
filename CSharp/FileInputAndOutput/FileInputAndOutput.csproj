@@ -62,6 +62,7 @@
     <Compile Include="ReadOrdinaryFileService.cs" />
     <Compile Include="ReadXmlFileService.cs" />
     <Compile Include="ViewModel.cs" />
+    <Compile Include="WriteToOrdinaryFile.cs" />
     <Compile Include="XmlContent.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingAndDebugging", "LoggingAndDebugging\LoggingAndDebugging.csproj", "{79B05617-E485-4A34-91FE-3655C1B3D811}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex", "Regex\Regex.csproj", "{748269CC-35DB-4258-94FD-C8EDBD9A36D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{715BBDE5-C4FF-4E14-9C65-6DF085069D51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{79B05617-E485-4A34-91FE-3655C1B3D811}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79B05617-E485-4A34-91FE-3655C1B3D811}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79B05617-E485-4A34-91FE-3655C1B3D811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748269CC-35DB-4258-94FD-C8EDBD9A36D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748269CC-35DB-4258-94FD-C8EDBD9A36D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748269CC-35DB-4258-94FD-C8EDBD9A36D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748269CC-35DB-4258-94FD-C8EDBD9A36D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715BBDE5-C4FF-4E14-9C65-6DF085069D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715BBDE5-C4FF-4E14-9C65-6DF085069D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715BBDE5-C4FF-4E14-9C65-6DF085069D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715BBDE5-C4FF-4E14-9C65-6DF085069D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
