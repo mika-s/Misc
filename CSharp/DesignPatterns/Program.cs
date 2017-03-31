@@ -1,4 +1,5 @@
-﻿using DesignPatterns.SimpleFactory;
+﻿using DesignPatterns.FactoryMethod;
+using DesignPatterns.SimpleFactory;
 
 namespace DesignPatterns
 {
@@ -6,7 +7,9 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            SimpleFactoryPattern.TestSimpleFactory();
+            //SimpleFactoryPattern.TestSimpleFactory();
+
+            FactoryMethodPattern.TestFactoryMethod();
         }
     }
 }

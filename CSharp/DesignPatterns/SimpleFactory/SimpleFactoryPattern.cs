@@ -6,13 +6,12 @@ namespace DesignPatterns.SimpleFactory
     {
         public static void TestSimpleFactory()
         {
-            IVehicle audi = VehicleFactory.CreateVehicle("road");
-            IVehicle a380 = VehicleFactory.CreateVehicle("air");
-            IVehicle psv = VehicleFactory.CreateVehicle("water");
+            Console.Write("Element: ");
+            string element = Console.ReadLine();
 
-            Console.WriteLine($"{audi.Type}");
-            Console.WriteLine($"{a380.Type}");
-            Console.WriteLine($"{psv.Type}");
+            IVehicle vehicle = VehicleFactory.CreateVehicle(element);
+
+            Console.WriteLine($"Type: {vehicle.Type}");
         }
     }
 }

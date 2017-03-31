@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryMethod\Pages\EmploymentPage.cs" />
+    <Compile Include="FactoryMethod\Pages\ConclusionPage.cs" />
+    <Compile Include="FactoryMethod\Pages\IntroductionPage.cs" />
+    <Compile Include="FactoryMethod\Pages\IPage.cs" />
+    <Compile Include="FactoryMethod\Cv.cs" />
+    <Compile Include="FactoryMethod\FactoryMethodPattern.cs" />
+    <Compile Include="FactoryMethod\Report.cs" />
+    <Compile Include="FactoryMethod\Document.cs" />
+    <Compile Include="FactoryMethod\Pages\SkillsPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFactory\Boat.cs" />
