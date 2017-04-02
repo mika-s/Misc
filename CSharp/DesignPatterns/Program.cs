@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.FactoryMethod;
+using DesignPatterns.Prototype;
 using DesignPatterns.SimpleFactory;
 using DesignPatterns.Singleton;
 
@@ -12,7 +13,9 @@ namespace DesignPatterns
 
             //FactoryMethodPattern.TestFactoryMethod();
 
-            SingletonPattern.TestSingletonPattern();
+            //SingletonPattern.TestSingletonPattern();
+
+            PrototypePattern.TestPrototypePattern();
         }
     }
 }

@@ -17,9 +17,6 @@ namespace DesignPatterns.Singleton
         {
             Console.WriteLine("Inside GetInstance() for NonLazyThreadSafeSingleton.");
 
-            if (instance == null)
-                instance = new NonLazyThreadSafeSingleton();
-
             return instance;
         }
     }

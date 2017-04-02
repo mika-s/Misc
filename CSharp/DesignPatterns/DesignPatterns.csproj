@@ -54,6 +54,9 @@
     <Compile Include="FactoryMethod\Pages\SkillsPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototype\AnotherClass.cs" />
+    <Compile Include="Prototype\ClonableClass.cs" />
+    <Compile Include="Prototype\PrototypePattern.cs" />
     <Compile Include="SimpleFactory\Boat.cs" />
     <Compile Include="SimpleFactory\Car.cs" />
     <Compile Include="SimpleFactory\Plane.cs" />
