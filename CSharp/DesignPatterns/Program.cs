@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.FactoryMethod;
 using DesignPatterns.SimpleFactory;
+using DesignPatterns.Singleton;
 
 namespace DesignPatterns
 {
@@ -9,7 +10,9 @@ namespace DesignPatterns
         {
             //SimpleFactoryPattern.TestSimpleFactory();
 
-            FactoryMethodPattern.TestFactoryMethod();
+            //FactoryMethodPattern.TestFactoryMethod();
+
+            SingletonPattern.TestSingletonPattern();
         }
     }
 }

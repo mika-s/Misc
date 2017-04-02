@@ -60,6 +60,9 @@
     <Compile Include="SimpleFactory\VehicleFactory.cs" />
     <Compile Include="SimpleFactory\IVehicle.cs" />
     <Compile Include="SimpleFactory\SimpleFactoryPattern.cs" />
+    <Compile Include="Singleton\LazyNonThreadSafeSingleton.cs" />
+    <Compile Include="Singleton\NonLazyThreadSafeSingleton.cs" />
+    <Compile Include="Singleton\SingletonPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
