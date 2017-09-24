@@ -1,0 +1,64 @@
+[
+    {
+        "id": "uuid:4a87e694-ff21-4172-bb7f-e33ec666de5e",
+        "kode": "AKT2002",
+        "uri": "http://psi.udir.no/kl06/AKT2002",
+        "url-data": "http://data.udir.no/kl06/AKT2002",
+        "tittel": [
+            {
+                "spraak": "http://data.udir.no/kl06/nob",
+                "verdi": "Administrasjonsfag"
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/eng",
+                "verdi": "Administration Subjects"
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/sme",
+                "verdi": "Hálddahusfágat"
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/nno",
+                "verdi": "Administrasjonsfag"
+            },
+            {
+                "spraak": "default",
+                "verdi": "Administrasjonsfag"
+            }
+        ],
+        "grep-type": "http://psi.udir.no/ontologi/kl06/fagkode",
+        "status": "http://data.udir.no/kl06/status_publisert",
+        "sist-endret": "2015-06-26T11:55:23"
+    },
+    {
+        "id": "uuid:a3207cb0-6168-451d-a056-3dbd16a67608",
+        "kode": "AKT2001",
+        "uri": "http://psi.udir.no/kl06/AKT2001",
+        "url-data": "http://data.udir.no/kl06/AKT2001",
+        "tittel": [
+            {
+                "spraak": "http://data.udir.no/kl06/nob",
+                "verdi": "Aktiviseringsfag"
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/eng",
+                "verdi": "Activation Subjects"
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/sme",
+                "verdi": "Aktiviserenfágat "
+            },
+            {
+                "spraak": "http://data.udir.no/kl06/nno",
+                "verdi": "Aktiviseringsfag"
+            },
+            {
+                "spraak": "default",
+                "verdi": "Aktiviseringsfag"
+            }
+        ],
+        "grep-type": "http://psi.udir.no/ontologi/kl06/fagkode",
+        "status": "http://data.udir.no/kl06/status_publisert",
+        "sist-endret": "2015-06-26T11:54:28"
+    }
+]
