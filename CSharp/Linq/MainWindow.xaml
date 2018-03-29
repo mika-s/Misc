@@ -1,0 +1,148 @@
+﻿<Window x:Class="Linq.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Linq"
+        mc:Ignorable="d"
+        Title="LINQ" Height="500" Width="1300" MinHeight="500" MinWidth="1300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="List 1"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="List 2"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="List 3"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="Result"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="5" Text="Join list 1"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="6" Text="Join list 2"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="7" Text="Join result"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <ListView Grid.Row="1" Grid.Column="0"
+                  ItemsSource="{Binding List1}"/>
+        <ListView Grid.Row="1" Grid.Column="1"
+                  ItemsSource="{Binding List2}"/>
+        <ListView Grid.Row="1" Grid.Column="2"
+                  ItemsSource="{Binding List3}"/>
+        <ListView Grid.Row="1" Grid.Column="3"
+                  ItemsSource="{Binding Result}"/>
+
+        <ListView Grid.Row="1" Grid.Column="5"
+                  ItemsSource="{Binding JoinList1}"/>
+        <ListView Grid.Row="1" Grid.Column="6"
+                  ItemsSource="{Binding JoinList2}"/>
+        <ListView Grid.Row="1" Grid.Column="7"
+                  ItemsSource="{Binding JoinResult}"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Filtering"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Take/skip"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="Take/skip"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="3" Text="Set operations"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="5" Text="Joining"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0" Width="160" Height="30"
+                Content="Filter less than 3 from List 1" Command="{Binding Filter1Command}"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Width="160" Height="30"
+                Content="Filter more than 3 from List 1" Command="{Binding Filter2Command}"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Width="160" Height="30"
+                Content="Filter odd from List 1" Command="{Binding FilterOddCommand}"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Width="160" Height="30"
+                Content="Filter even from List 1" Command="{Binding FilterEvenCommand}"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Width="160" Height="30"
+                Content="First of List 1" Command="{Binding FirstCommand}"/>
+
+            <Button Grid.Row="5" Grid.Column="0" Width="160" Height="30"
+                Content="Last of List 2" Command="{Binding LastCommand}"/>
+
+            <Button Grid.Row="0" Grid.Column="1" Width="140" Height="30"
+                Content="Take 2 from List 1" Command="{Binding TakeCommand}"/>
+
+            <Button Grid.Row="1" Grid.Column="1" Width="140" Height="30"
+                Content="Skip 2 from List 1" Command="{Binding SkipCommand}"/>
+
+            <Button Grid.Row="2" Grid.Column="1" Width="140" Height="30"
+                Content="Skip 1 take 2 from List 1" Command="{Binding SkipTakeCommand}"/>
+
+            <Button Grid.Row="0" Grid.Column="2" Width="160" Height="30"
+                Content="Sum of List 1" Command="{Binding SumCommand}"/>
+
+            <Button Grid.Row="1" Grid.Column="2" Width="160" Height="30"
+                Content="Count of List 2" Command="{Binding CountCommand}"/>
+
+            <Button Grid.Row="2" Grid.Column="2" Width="160" Height="30"
+                Content="Min of List 1" Command="{Binding MinCommand}"/>
+
+            <Button Grid.Row="3" Grid.Column="2" Width="160" Height="30"
+                Content="Max of List 2" Command="{Binding MaxCommand}"/>
+
+            <Button Grid.Row="4" Grid.Column="2" Width="160" Height="30"
+                Content="Average of List 3" Command="{Binding AverageCommand}"/>
+
+            <Button Grid.Row="0" Grid.Column="3" Width="160" Height="30"
+                Content="Union of List 2 and 3" Command="{Binding UnionCommand}"/>
+
+            <Button Grid.Row="1" Grid.Column="3" Width="160" Height="30"
+                Content="Intersect of List 1 and 2" Command="{Binding IntersectCommand}"/>
+
+            <Button Grid.Row="0" Grid.Column="5" Width="160" Height="30"
+                Content="Join List 1 and 2" Command="{Binding JoinCommand}"/>
+        </Grid>
+    </Grid>
+</Window>
