@@ -21,19 +21,17 @@ namespace FileInputAndOutput
 
             ReadOrdinaryFileWithFileStreamCommand = new DelegateCommand<string>(ReadOrdinaryFileWithFileStreamExecute);
             ReadOrdinaryFileWithStreamReaderCommand = new DelegateCommand<string>(ReadOrdinaryFileWithStreamReaderExecute);
+            ReadOrdinaryFileWithReadAllTextCommand = new DelegateCommand<string>(ReadOrdinaryFileWithReadAllTextExecute);
             ReadXmlFileWithXmlDocumentCommand = new DelegateCommand<string>(ReadXmlFileWithXmlDocumentExecute);
             ReadXmlFileWithLinqCommand = new DelegateCommand<string>(ReadXmlFileWithLinqExecute);
             ReadCsvFileCommand = new DelegateCommand<string>(ReadCsvFileExecute);
         }
 
         public DelegateCommand<string> ReadOrdinaryFileWithFileStreamCommand { get; private set; }
-
         public DelegateCommand<string> ReadOrdinaryFileWithStreamReaderCommand { get; private set; }
-
+        public DelegateCommand<string> ReadOrdinaryFileWithReadAllTextCommand { get; private set; }
         public DelegateCommand<string> ReadXmlFileWithXmlDocumentCommand { get; private set; }
-
         public DelegateCommand<string> ReadXmlFileWithLinqCommand { get; private set; }
-
         public DelegateCommand<string> ReadCsvFileCommand { get; private set; }
 
         public string FileContent
@@ -92,6 +90,11 @@ namespace FileInputAndOutput
         private void ReadOrdinaryFileWithStreamReaderExecute(string parameter)
         {
             FileContent = readOrdinaryFile.ReadFileWithStreamReader();
+        }
+
+        private void ReadOrdinaryFileWithReadAllTextExecute(string parameter)
+        {
+            FileContent = readOrdinaryFile.ReadFileWithReadAllText();
         }
 
         private void ReadXmlFileWithXmlDocumentExecute(string parameter)

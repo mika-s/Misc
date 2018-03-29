@@ -47,5 +47,16 @@ namespace FileInputAndOutput
 
             return inputAsString;
         }
+
+        /// <summary>
+        /// Read a file with the ReadAllText static method.
+        /// </summary>
+        /// <returns>Text in the file.</returns>
+        public string ReadFileWithReadAllText()
+        {
+            string inputAsString = File.ReadAllText(fileName);
+
+            return inputAsString;
+        }
     }
 }

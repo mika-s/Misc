@@ -34,6 +34,10 @@
                     Command="{Binding ReadOrdinaryFileWithStreamReaderCommand}"
                     Height="25" Width="210" Margin="10" />
 
+            <Button Content="Read ordinary file with ReadAllText"
+                    Command="{Binding ReadOrdinaryFileWithReadAllTextCommand}"
+                    Height="25" Width="210" Margin="10" />
+
             <Button Content="Read XML file with XmlDocument" Command="{Binding ReadXmlFileWithXmlDocumentCommand}"
                     Height="25" Width="200" Margin="10" />
 
