@@ -1,0 +1,69 @@
+﻿<Window x:Class="FileEncryption.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileEncryption"
+        mc:Ignorable="d"
+        Title="File encryption" Height="900" Width="800">
+    <Window.Resources>
+        <Style TargetType="ListViewItem" x:Key="listViewDoubleClick">
+            <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="0.7*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="0" Grid.Column="0"
+                  ItemContainerStyle="{StaticResource listViewDoubleClick}"
+                  SelectedItem="{Binding SelectedFolder}"
+                  ItemsSource="{Binding Folders}"/>
+
+        <ListView Grid.Row="0" Grid.Column="1"
+                  SelectedItem="{Binding SelectedFile}"
+                  ItemsSource="{Binding Files}"/>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                     Height="25" Width="300" Text="{Binding Hashresult}"/>
+
+            <Button Grid.Row="1" Grid.Column="0"
+                    Height="30" Width="100"
+                    Content="{Binding EncryptDecryptLabel}"
+                    Command="{Binding EncryptDecryptCommand}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       VerticalAlignment="Center"
+                       Text="{Binding Message}" />
+
+            <ComboBox Grid.Row="1" Grid.Column="2"
+                      Height="30" Width="75"
+                      VerticalContentAlignment="Center"
+                      ItemsSource="{Binding Hashtypes}"
+                      SelectedItem="{Binding SelectedHashtype}"/>
+
+            <Button Grid.Row="1" Grid.Column="3"
+                    Height="30" Width="100" Content="Get hash"
+                    Command="{Binding HashCommand}"/>
+        </Grid>
+
+    </Grid>
+</Window>

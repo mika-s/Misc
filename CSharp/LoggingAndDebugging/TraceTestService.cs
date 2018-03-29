@@ -16,13 +16,13 @@ namespace LoggingAndDebugging
         public void TestTrace()
         {
             // Trace will also be used in the release build.
-            Trace.WriteLine($"{DateTime.Now}: This is a test of trace.");
+            Trace.WriteLine($"{DateTime.Now}: This is a test of Trace.WriteLine().");
         }
 
         public void TestDebug()
         {
             // Debug isn't run in the release build.
-            Debug.WriteLine($"{DateTime.Now}: This is a test of trace.");
+            Debug.WriteLine($"{DateTime.Now}: This is a test of Debug.WriteLine().");
         }
 
         public void TestTraceAssert()
