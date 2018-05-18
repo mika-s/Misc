@@ -1,0 +1,39 @@
+﻿<Window x:Class="Web.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Web"
+        mc:Ignorable="d"
+        Title="Web" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Time" />
+            <TextBox Text="{Binding TimeInformation.Time, Mode=OneWay}"/>
+            
+            <TextBlock Text="Milliseconds since epoch" />
+            <TextBox Text="{Binding TimeInformation.MillisecondsSinceEpoch, Mode=OneWay}"/>
+            
+            <TextBlock Text="Date" />
+            <TextBox Text="{Binding TimeInformation.Date, Mode=OneWay}"/>
+
+            <Button Height="30" Width="100"
+                Content="GET data" Command="{Binding GetCommand}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Button Height="30" Width="100"
+                Content="POST data" Command="{Binding PostCommand}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

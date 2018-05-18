@@ -52,6 +52,11 @@
     <Compile Include="FactoryMethod\Report.cs" />
     <Compile Include="FactoryMethod\Document.cs" />
     <Compile Include="FactoryMethod\Pages\SkillsPage.cs" />
+    <Compile Include="FluentInterfaceWithContext\Car.cs" />
+    <Compile Include="FluentInterfaceWithContext\FluentInterfacePattern.cs" />
+    <Compile Include="FluentInterfaceWithExtMethods\FluentInterfacePattern.cs" />
+    <Compile Include="FluentInterfaceWithExtMethods\Person.cs" />
+    <Compile Include="FluentInterfaceWithExtMethods\PersonBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototype\AnotherClass.cs" />

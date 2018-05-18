@@ -1,4 +1,6 @@
 ﻿using DesignPatterns.FactoryMethod;
+using DesignPatterns.FluentInterfaceWithContext;
+using DesignPatterns.FluentInterfaceWithExtMethods;
 using DesignPatterns.Prototype;
 using DesignPatterns.SimpleFactory;
 using DesignPatterns.Singleton;
@@ -15,7 +17,11 @@ namespace DesignPatterns
 
             //SingletonPattern.TestSingletonPattern();
 
-            PrototypePattern.TestPrototypePattern();
+            //PrototypePattern.TestPrototypePattern();
+
+            //FluentInterfacePatternWithContext.TestFluentInterfacePattern();
+
+            FluentInterfacePatternWithExtMethods.TestFluentInterfacePattern();
         }
     }
 }
