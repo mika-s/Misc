@@ -1,0 +1,12 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sec="http://api.example.com/someservice" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:ssrv="http://schemas.datacontract.org/2004/07/someservice" xmlns:sys="http://schemas.datacontract.org/2004/07/System" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:sec1="http://schemas.example.com/someservice">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action>http://api.example.com/someservice/ISomeService/CreateUser</wsa:Action>
+   </soap:Header>
+   <soap:Body>
+      <sec:CreateUser>
+         <sec:user>
+
+         </sec:user>
+      </sec:CreateUser>
+   </soap:Body>
+</soap:Envelope>
