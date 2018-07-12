@@ -6,7 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Exceptions.fs" />
+    <Compile Include="Xml.fs" />
+    <Compile Include="Json.fs" />
+    <Compile Include="Patterns.fs" />
+    <Compile Include="Util.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>

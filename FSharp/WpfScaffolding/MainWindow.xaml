@@ -1,0 +1,18 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Scaffolding of WPF for F#" Height="350" Width="525">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <TextBlock Grid.Row="0"
+        Text="{Binding TestProperty}" />
+
+    <Button Grid.Row="1"
+        Content="Test button" Command="{Binding ExampleCommand}" />
+  </Grid>
+</Window>
