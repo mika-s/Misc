@@ -25,6 +25,8 @@ let mergeDictsIntoMap (a: IDictionary<'a, 'b>) (b: IDictionary<'a, 'b>) =
 
     mergeMaps aMap bMap
 
+let nullCoalesce (value: Nullable<'T>) (otherValue: 'T) = if value.HasValue then value.Value else otherValue
+
 let isOdd  (x: int) = x % 2 <> 0
 let isEven (x: int) = x % 2 =  0
 

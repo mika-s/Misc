@@ -11,6 +11,7 @@
     <Compile Include="Json.fs" />
     <Compile Include="Patterns.fs" />
     <Compile Include="Util.fs" />
+    <Compile Include="CommandLineArgumentParsing.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
