@@ -4,44 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharp"
-        mc:Ignorable="d"
-        WindowState="Maximized"
+        mc:Ignorable="d" WindowState="Maximized"
         Title="Testing of WPF features and concepts" Height="350" Width="525">
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
     <Window.Resources>
-        <local:EnumToStringConverter x:Key="EnumToStringConverter" />
-        <local:BoolToImageConverter x:Key="BoolToImageConverter" />
+        <local:EnumToStringConverter x:Key="EnumToStringConverter"/>
+        <local:BoolToImageConverter x:Key="BoolToImageConverter"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
         <!-- Converters for images. -->
         <Image Grid.Row="0" Grid.Column="0" Height="25" Width="70" VerticalAlignment="Top"
-               Source="{Binding TestEnumToImage, Converter={StaticResource EnumToStringConverter}}" />
+               Source="{Binding TestEnumToImage, Converter={StaticResource EnumToStringConverter}}"/>
         <Image Grid.Row="0" Grid.Column="0" Height="25" Width="70" VerticalAlignment="Center"
-               Source="{Binding BoolToImageTrue, Converter={StaticResource BoolToImageConverter}}" />
+               Source="{Binding BoolToImageTrue, Converter={StaticResource BoolToImageConverter}}"/>
         <Image Grid.Row="0" Grid.Column="0" Height="25" Width="70" VerticalAlignment="Bottom"
-               Source="{Binding BoolToImageFalse, Converter={StaticResource BoolToImageConverter}}" />
+               Source="{Binding BoolToImageFalse, Converter={StaticResource BoolToImageConverter}}"/>
 
-        <!-- DataGrid examples.--> 
-        <local:DataGridWithChosenColumns Grid.Row="0" Grid.Column="1" />
-        <local:DataGridWithButtons Grid.Row="1" Grid.Column="1" />
-        <local:DataGridWithTransparentSelectedItem Grid.Row="2" Grid.Column="1" />
-        <local:DataGridWithSingleClickCheckBox Grid.Row="3" Grid.Column="1" />
-        
-        <!--Various examples-->
-        <local:EnumBoundToComboBox Grid.Row="0" Grid.Column="2" />
+        <!-- DataGrid examples. --> 
+        <local:DataGridWithChosenColumns Grid.Row="0" Grid.Column="1"/>
+        <local:DataGridWithButtons Grid.Row="1" Grid.Column="1"/>
+        <local:DataGridWithTransparentSelectedItem Grid.Row="2" Grid.Column="1"/>
+        <local:DataGridWithSingleClickCheckBox Grid.Row="3" Grid.Column="1"/>
+
+        <!-- Various examples. -->
+        <local:EnumBoundToComboBox Grid.Row="0" Grid.Column="2"/>
+        <local:TextBlockWithLineshift Grid.Row="1" Grid.Column="2"/>
+        <local:UsingBooleanToVisibilityConverter Grid.Row="2" Grid.Column="2"/>
     </Grid>
 </Window>

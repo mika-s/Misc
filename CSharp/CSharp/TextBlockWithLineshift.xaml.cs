@@ -2,9 +2,9 @@
 
 namespace CSharp
 {
-    public partial class EnumBoundToComboBox : UserControl
+    public partial class TextBlockWithLineshift : UserControl
     {
-        public EnumBoundToComboBox()
+        public TextBlockWithLineshift()
         {
             InitializeComponent();
         }
