@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{6B673FB0-0552-4917-BC16-4354ED34A865}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{9E456D3C-BB71-47A3-B1B9-3887B9D4A2AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{3F386787-0E26-444E-AE99-2CD395FF4F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelPerTab", "ViewModelPerTab\ViewModelPerTab.csproj", "{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,8 +77,15 @@ Global
 		{3F386787-0E26-444E-AE99-2CD395FF4F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F386787-0E26-444E-AE99-2CD395FF4F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F386787-0E26-444E-AE99-2CD395FF4F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AE6126A-0615-4198-B7CB-22944B76F6A5}
 	EndGlobalSection
 EndGlobal

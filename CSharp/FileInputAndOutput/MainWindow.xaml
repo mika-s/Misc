@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileInputAndOutput"
         mc:Ignorable="d"
-        Title="File IO" Height="700" Width="525">
+        Title="File IO" Height="900" Width="525">
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
@@ -39,11 +39,17 @@
                     Height="25" Width="210" Margin="10" />
 
             <Button Content="Read XML file with XmlDocument" Command="{Binding ReadXmlFileWithXmlDocumentCommand}"
-                    Height="25" Width="200" Margin="10" />
+                    Height="25" Width="210" Margin="10" />
 
             <Button Content="Read XML file with LINQ" Command="{Binding ReadXmlFileWithLinqCommand}"
-                    Height="25" Width="200" Margin="10" />
+                    Height="25" Width="210" Margin="10" />
 
+            <Button Content="Read XML file with serialization" Command="{Binding ReadFromXmlFileWithSerializationCommand}"
+                    Height="25" Width="210" Margin="10" />
+
+            <Button Content="Write XML file with serialization" Command="{Binding WriteToXmlFileWithSerializationCommand}"
+                    Height="25" Width="210" Margin="10" />
+            
             <Grid>
                 <TextBox Text="{Binding CsvColumnToRead, Mode=TwoWay}" HorizontalAlignment="Left"
                          Height="25" Width="100" Margin="10" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FileInputAndOutput.Models;
 
 namespace FileInputAndOutput
 {
@@ -12,12 +13,14 @@ namespace FileInputAndOutput
         private ReadOrdinaryFileService readOrdinaryFile;
         private ReadXmlFileService readXmlFile;
         private ReadCsvFileService readCsvFile;
+        private WriteToXmlFileService writeXmlFile;
 
         public MainViewModel()
         {
             readOrdinaryFile = new ReadOrdinaryFileService("..\\..\\Files\\Ordinary textfile.txt");
             readXmlFile = new ReadXmlFileService("..\\..\\Files\\XML file.xml");
             readCsvFile = new ReadCsvFileService("..\\..\\Files\\CSV file.csv", ",", Encoding.ASCII);
+            writeXmlFile = new WriteToXmlFileService("..\\..\\Files\\Output XML.xml");
 
             ReadOrdinaryFileWithFileStreamCommand = new DelegateCommand<string>(ReadOrdinaryFileWithFileStreamExecute);
             ReadOrdinaryFileWithStreamReaderCommand = new DelegateCommand<string>(ReadOrdinaryFileWithStreamReaderExecute);
@@ -25,14 +28,19 @@ namespace FileInputAndOutput
             ReadXmlFileWithXmlDocumentCommand = new DelegateCommand<string>(ReadXmlFileWithXmlDocumentExecute);
             ReadXmlFileWithLinqCommand = new DelegateCommand<string>(ReadXmlFileWithLinqExecute);
             ReadCsvFileCommand = new DelegateCommand<string>(ReadCsvFileExecute);
+            ReadFromXmlFileWithSerializationCommand = new DelegateCommand<string>(ReadFromXmlFileWithSerializationExecute);
+
+            WriteToXmlFileWithSerializationCommand = new DelegateCommand<string>(WriteToXmlFileWithSerializationExecute);
         }
 
-        public DelegateCommand<string> ReadOrdinaryFileWithFileStreamCommand { get; private set; }
-        public DelegateCommand<string> ReadOrdinaryFileWithStreamReaderCommand { get; private set; }
-        public DelegateCommand<string> ReadOrdinaryFileWithReadAllTextCommand { get; private set; }
-        public DelegateCommand<string> ReadXmlFileWithXmlDocumentCommand { get; private set; }
-        public DelegateCommand<string> ReadXmlFileWithLinqCommand { get; private set; }
-        public DelegateCommand<string> ReadCsvFileCommand { get; private set; }
+        public DelegateCommand<string> ReadOrdinaryFileWithFileStreamCommand { get; }
+        public DelegateCommand<string> ReadOrdinaryFileWithStreamReaderCommand { get; }
+        public DelegateCommand<string> ReadOrdinaryFileWithReadAllTextCommand { get; }
+        public DelegateCommand<string> ReadXmlFileWithXmlDocumentCommand { get; }
+        public DelegateCommand<string> ReadXmlFileWithLinqCommand { get; }
+        public DelegateCommand<string> ReadCsvFileCommand { get; }
+        public DelegateCommand<string> ReadFromXmlFileWithSerializationCommand { get; }
+        public DelegateCommand<string> WriteToXmlFileWithSerializationCommand { get; }
 
         public string FileContent
         {
@@ -117,6 +125,17 @@ namespace FileInputAndOutput
             {
                 FileContent = "Could not find the column header in the CSV file.";
             }
+        }
+
+        private void ReadFromXmlFileWithSerializationExecute(string parameter)
+        {
+            Account readAccount = readXmlFile.DeserializeXmlFromFile<Account>("..\\..\\Files\\Xml file to deserialize.xml");
+            FileContent = readAccount.ToString();
+        }
+
+        private void WriteToXmlFileWithSerializationExecute(string parameter)
+        {
+            writeXmlFile.SerializeXmlAndWriteToFile(new Account("testuser", "Test", "Person", DateTime.Now, 200000));
         }
     }
 }

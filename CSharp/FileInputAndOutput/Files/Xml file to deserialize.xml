@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Account xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/FileInputAndOutput.Models">
+    <BirthDate>1955-01-25T15:49:13.9503447+01:00</BirthDate>
+    <Firstname>Test</Firstname>
+	<Income>100000</Income>
+    <Lastname>Person</Lastname>
+	<Username>testuser</Username>
+</Account>

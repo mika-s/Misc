@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -34,7 +37,7 @@ namespace FileInputAndOutput
                 XmlNode childValue2Node = childElementNode.SelectSingleNode("./ChildValue[@Name='ChildValue2']");
                 XmlNode childValue3Node = childElementNode.SelectSingleNode("./ChildValue[@Name='ChildValue3']");
 
-                int childValue1 = Int32.Parse(childValue1Node.Attributes["Value"].Value, CultureInfo.InvariantCulture);
+                int childValue1 = int.Parse(childValue1Node.Attributes["Value"].Value, CultureInfo.InvariantCulture);
                 string childValue2 = childValue2Node.Attributes["Value"].Value;
                 XmlEnumValues childValue3 = (XmlEnumValues)Enum.Parse(typeof(XmlEnumValues), childValue3Node.Attributes["Value"].Value);
 
@@ -63,7 +66,7 @@ namespace FileInputAndOutput
             foreach (var childElement in childElements)
             {
                 var childValue1q = childElement.ChildValues.Where(p => p.Attribute("Name").Value == "ChildValue1").Select(p => p).First();
-                int childValue1 = Int32.Parse(childValue1q.Attribute("Value").Value);
+                int childValue1 = int.Parse(childValue1q.Attribute("Value").Value);
 
                 var childValue2q = childElement.ChildValues.Where(p => p.Attribute("Name").Value == "ChildValue2").Select(p => p).First();
                 string childValue2 = childValue2q.Attribute("Value").Value;
@@ -75,6 +78,24 @@ namespace FileInputAndOutput
             }
 
             return content;
+        }
+
+        /// <summary>
+        /// Read the XML file using deserialization with DataContractSerializer.
+        /// The elements in the file have to be in alphabetical order when using DataContractSerializer.
+        /// </summary>
+        public T DeserializeXmlFromFile<T>(string filenameForDeserialization)
+        {
+            var serializer = new DataContractSerializer(typeof(T));
+
+            T deserializedObj = default(T);
+
+            using (var reader = new XmlTextReader(filenameForDeserialization))
+            {
+                deserializedObj = (T)serializer.ReadObject(reader);
+            }
+
+            return deserializedObj;
         }
     }
 }

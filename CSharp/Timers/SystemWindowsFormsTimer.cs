@@ -7,7 +7,7 @@ namespace Timers
 {
     /// <summary>
     /// A timer based on System.Windows.Forms.Timer. Should be used for Windows Forms applications only.
-    /// Calls the TimerFired method every 10 seconds. Starts immidiatly.
+    /// Calls the TimerFired method every 10 seconds. Starts immediately.
     /// </summary>
     /// <remarks> From MSDN:
     /// The Windows Forms Timer component is single-threaded, and is limited to an accuracy of 55 milliseconds.

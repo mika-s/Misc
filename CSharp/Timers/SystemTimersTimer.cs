@@ -7,7 +7,7 @@ namespace Timers
 {
     /// <summary>
     /// A timer based on System.Timers.Timer.
-    /// Calls the TimerFired method every 10 seconds. Starts immidiatly.
+    /// Calls the TimerFired method every 10 seconds. Starts immediately.
     /// </summary>
     public sealed class SystemTimersTimer : INotifyPropertyChanged
     {
@@ -22,7 +22,7 @@ namespace Timers
             Timer.Interval = 10000;
             Timer.Start();
 
-            // This timer does not fire immidiatly, but it can be done by calling the event handler manually.
+            // This timer does not fire immediately, but it can be done by calling the event handler manually.
             TimerFired(this, null);
         }
 
