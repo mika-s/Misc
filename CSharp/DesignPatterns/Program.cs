@@ -1,4 +1,5 @@
-﻿using DesignPatterns.FactoryMethod;
+﻿using DesignPatterns.Command;
+using DesignPatterns.FactoryMethod;
 using DesignPatterns.FluentInterfaceWithContext;
 using DesignPatterns.FluentInterfaceWithExtMethods;
 using DesignPatterns.Prototype;
@@ -11,6 +12,8 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            CommandPattern.TestCommandPattern();
+
             //SimpleFactoryPattern.TestSimpleFactory();
 
             //FactoryMethodPattern.TestFactoryMethod();
@@ -21,7 +24,7 @@ namespace DesignPatterns
 
             //FluentInterfacePatternWithContext.TestFluentInterfacePattern();
 
-            FluentInterfacePatternWithExtMethods.TestFluentInterfacePattern();
+            //FluentInterfacePatternWithExtMethods.TestFluentInterfacePattern();
         }
     }
 }
