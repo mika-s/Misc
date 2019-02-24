@@ -44,12 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\AdapterPattern.cs" />
+    <Compile Include="Adapter\ClassThatTakesPerson.cs" />
+    <Compile Include="Adapter\PersonAdapter.cs" />
+    <Compile Include="Adapter\NewPerson.cs" />
+    <Compile Include="Adapter\Person.cs" />
     <Compile Include="Command\TextOperation.cs" />
     <Compile Include="Command\MarkCommand.cs" />
     <Compile Include="Command\PasteCommand.cs" />
     <Compile Include="Command\CopyCommand.cs" />
     <Compile Include="Command\CutCommand.cs" />
     <Compile Include="Command\CommandPattern.cs" />
+    <Compile Include="Facade\CarControls.cs" />
+    <Compile Include="Facade\FacadePattern.cs" />
+    <Compile Include="Facade\GearShiftControls.cs" />
+    <Compile Include="Facade\PedalControls.cs" />
+    <Compile Include="Facade\SteeringWheelControls.cs" />
     <Compile Include="FactoryMethod\Pages\EmploymentPage.cs" />
     <Compile Include="FactoryMethod\Pages\ConclusionPage.cs" />
     <Compile Include="FactoryMethod\Pages\IntroductionPage.cs" />

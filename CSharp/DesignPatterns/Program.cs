@@ -1,4 +1,6 @@
-﻿using DesignPatterns.Command;
+﻿using DesignPatterns.Adapter;
+using DesignPatterns.Command;
+using DesignPatterns.Facade;
 using DesignPatterns.FactoryMethod;
 using DesignPatterns.FluentInterfaceWithContext;
 using DesignPatterns.FluentInterfaceWithExtMethods;
@@ -12,7 +14,11 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            CommandPattern.TestCommandPattern();
+            //AdapterPattern.TestAdapterPattern();
+
+            //CommandPattern.TestCommandPattern();
+
+            FacadePattern.TestFacadePattern();
 
             //SimpleFactoryPattern.TestSimpleFactory();
 
