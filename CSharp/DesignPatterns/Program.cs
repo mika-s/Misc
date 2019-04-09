@@ -1,12 +1,14 @@
-﻿using DesignPatterns.Adapter;
-using DesignPatterns.Command;
-using DesignPatterns.Facade;
-using DesignPatterns.FactoryMethod;
-using DesignPatterns.FluentInterfaceWithContext;
-using DesignPatterns.FluentInterfaceWithExtMethods;
-using DesignPatterns.Prototype;
-using DesignPatterns.SimpleFactory;
-using DesignPatterns.Singleton;
+﻿using DesignPatterns.DDD.ValueObject;
+using DesignPatterns.GoF.Structural.Adapter;
+using DesignPatterns.GoF.Structural.Bridge;
+using DesignPatterns.GoF.Behavioral.Command;
+using DesignPatterns.GoF.Structural.Facade;
+using DesignPatterns.GoF.Creational.FactoryMethod;
+using DesignPatterns.GoF.Creational.Prototype;
+using DesignPatterns.GoF.Creational.SimpleFactory;
+using DesignPatterns.GoF.Creational.Singleton;
+using DesignPatterns.Other.FluentInterfaceWithContext;
+using DesignPatterns.Other.FluentInterfaceWithExtMethods;
 
 namespace DesignPatterns
 {
@@ -14,11 +16,15 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            ValueObjectPattern.TestValueObjectPattern();
+
             //AdapterPattern.TestAdapterPattern();
+
+            //BridgePattern.TestBridgePattern();
 
             //CommandPattern.TestCommandPattern();
 
-            FacadePattern.TestFacadePattern();
+            //FacadePattern.TestFacadePattern();
 
             //SimpleFactoryPattern.TestSimpleFactory();
 

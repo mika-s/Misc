@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{6B673FB0-0552-4917-BC16-4354ED34A865}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{6B673FB0-0552-4917-BC16-4354ED34A865}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaffoldBasicApplication", "ScaffoldBasicApplication\ScaffoldBasicApplication.csproj", "{FF59044B-3A6B-4BEB-A15A-0EEFEBB03273}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{3F386787-0E26-444E-AE99-2CD395FF4F45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelPerTab", "ViewModelPerTab\ViewModelPerTab.csproj", "{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralUtil", "GeneralUtil\GeneralUtil.csproj", "{A177793A-56AF-4092-92AB-E8E4A8BF5627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042DD19B-8DB5-4431-B3E4-C5B4BF2A1D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A177793A-56AF-4092-92AB-E8E4A8BF5627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A177793A-56AF-4092-92AB-E8E4A8BF5627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A177793A-56AF-4092-92AB-E8E4A8BF5627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A177793A-56AF-4092-92AB-E8E4A8BF5627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
