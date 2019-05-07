@@ -5,6 +5,9 @@ namespace DesignPatterns.DDD.ValueObject
     /// <summary>
     /// https://en.wikipedia.org/wiki/Value_object
     /// 
+    /// An object that contains attributes but has no conceptual identity.
+    /// They should be treated as immutable.
+    /// 
     /// Use a Name class that has Value Object-like properties.
     /// Structs are needed for real value objects, as they are value types.
     /// </summary>

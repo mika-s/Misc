@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DDD\Repository\BaseEntitiy.cs" />
+    <Compile Include="DDD\Repository\IRepository.cs" />
+    <Compile Include="DDD\Repository\Order.cs" />
+    <Compile Include="DDD\Repository\OrderRepository.cs" />
+    <Compile Include="DDD\Repository\RepositoryPattern.cs" />
     <Compile Include="DDD\ValueObject\Name.cs" />
     <Compile Include="DDD\ValueObject\ValueObjectPattern.cs" />
     <Compile Include="GoF\Behavioral\Command\CommandPattern.cs" />
