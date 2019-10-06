@@ -18,9 +18,8 @@ namespace Timers
         {
             Timer = new Timer();
             Timer.Elapsed += TimerFired;
-            Timer.Enabled = true;
             Timer.Interval = 10000;
-            Timer.Start();
+            Timer.Start(); // sets Timer.Enabled = true
 
             // This timer does not fire immediately, but it can be done by calling the event handler manually.
             TimerFired(this, null);
